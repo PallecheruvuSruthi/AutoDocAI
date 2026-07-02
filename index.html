@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AutoDocAI | Intelligent Code Comment Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+        <i class="fa-solid fa-robot"></i>
+        <span>AutoDocAI</span>
+    </div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#generator">Generator</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>Intelligent Code Comment Generator</h1>
+
+        <p>
+
+            Generate professional AI-powered comments for Python source code.
+
+            Upload a .py file or paste Python code below.
+
+        </p>
+
+        <a href="#generator" class="hero-btn">
+
+            Start Commenting
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ================= GENERATOR ================= -->
+
+<section id="generator" class="generator">
+
+    <h2>Generate Comments</h2>
+
+    <div class="generator-card">
+
+        <!-- LEFT PANEL -->
+
+        <div class="left-panel">
+
+            <label>Upload Python File</label>
+
+            <input
+                type="file"
+                id="fileInput"
+                accept=".py">
+
+            <div class="divider">
+
+                <span>OR</span>
+
+            </div>
+
+            <label>Paste Python Code</label>
+
+            <textarea
+
+                id="codeInput"
+
+                placeholder="Paste your Python code here...">
+
+            </textarea>
+
+            <p id="errorMessage"></p>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+
+        <div class="right-panel">
+
+            <label>Comment Mode</label>
+
+            <select id="commentMode">
+
+                <option>Brief</option>
+
+                <option>Detailed</option>
+
+                <option selected>Professional</option>
+
+            </select>
+
+            <button id="generateBtn">
+
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                Generate Comments
+
+            </button>
+
+            <button id="regenerateBtn">
+
+                <i class="fa-solid fa-rotate"></i>
+
+                Regenerate
+
+            </button>
+
+            <div class="status-card">
+
+                <h3>Status</h3>
+
+                <p id="status">
+
+                    Waiting for code...
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ====== PART 2 STARTS BELOW ====== -->
+
+<!-- ================= OUTPUT ================= -->
+
+<section class="output">
+
+    <h2>Generated Output</h2>
+
+    <div class="output-container">
+
+        <!-- Original Code -->
+
+        <div class="output-card">
+
+            <div class="card-header">
+
+                <h3>Original Code</h3>
+
+            </div>
+
+            <textarea
+                id="originalCode"
+                readonly
+                placeholder="Your original Python code will appear here...">
+            </textarea>
+
+        </div>
+
+        <!-- AI Commented Code -->
+
+        <div class="output-card">
+
+            <div class="card-header">
+
+                <h3>Commented Code</h3>
+
+            </div>
+
+            <textarea
+                id="outputCode"
+                readonly
+                placeholder="AI generated commented code will appear here...">
+            </textarea>
+
+        </div>
+
+    </div>
+
+    <div class="action-buttons">
+
+        <button id="copyBtn">
+
+            <i class="fa-solid fa-copy"></i>
+
+            Copy
+
+        </button>
+
+        <button id="downloadBtn">
+
+            <i class="fa-solid fa-download"></i>
+
+            Download
+
+        </button>
+
+        <button id="clearBtn">
+
+            <i class="fa-solid fa-trash"></i>
+
+            Clear
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="about">
+
+    <div class="about-card">
+
+        <h2>About AutoDocAI</h2>
+
+        <p>
+
+            AutoDocAI is an AI-powered web application that automatically
+            generates meaningful comments and documentation for Python
+            source code using Google's Gemini AI model. It improves code
+            readability, maintainability, and documentation quality for
+            developers, students, and software teams.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+
+        © 2026 AutoDocAI | Intelligent Code Comment Generator
+
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
