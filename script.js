@@ -21,7 +21,7 @@ const status = document.getElementById("status");
 const errorMessage = document.getElementById("errorMessage");
 
 // Backend URL
-const API_URL = "http://127.0.0.1:8000/generate";
+const API_URL = "https://autodocai-043i.onrender.com/generate";
 
 // ================================
 // Status
